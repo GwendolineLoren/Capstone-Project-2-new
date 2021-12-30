@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+  <link rel="stylesheet" href="../css File/aboutus.css">
+</head>
+
+<body>
+  <header>
+    <a href="#" class="logo"><span>phone</span>Shop</a>
+    <input type="checkbox" id="menu-bar">
+    <label for="menu-bar" class="fas fa-bars"></label>
+    <nav class="Menu">
+      <a href="home.html">Home</a>
+      <a href="aboutus.html">About us</a>
+      <a href="catalogue.html">Catalogue</a>
+      <a href="MeetWithUs.html">Meet the Team</a>
+    </nav>
+  </header>
+  <!-- about section starts  -->
+  <section class="about" id="about">
+
+    <h1 class="heading"> about the store </h1>
+
+    <div class="column">
+
+      <div class="image">
+        <img src="images/about-img.png" alt="">
+      </div>
+
+      <div class="content" >
+        <h3>Easy And Perfect Solution For Your Business App</h3>
+        <br>
+        <p id="p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla placeat deserunt saepe repudiandae
+          veniam soluta minima dolor hic aperiam iure.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, quaerat. Dolorem ratione saepe magni
+          quo inventore porro ab voluptates eos, nam eius provident accusantium, quia similique est, repellendus et
+          reiciendis.</p>
+      </div>
+
+    </div>
+
+    <!-- about section ends -->
+
+    <!-- review section starts  -->
+
+    <div class="review" id="review">
+
+      <button id="button1">
+        <h1 class="heading"> people's review </h1>
+      </button>
+
+      <div class="box-container">
+
+        <div class="box">
+          <div class="user" id="user">
+            <h3>john deo</h3>
+            <div class="comment" id="comment">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus et perspiciatis nisi tempore aspernatur accusantium sed distinctio facilis aperiam laborum autem earum repellat, commodi eum. Ullam cupiditate expedita officiis obcaecati?
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="user" id="user">
+            <h3>Fred madele</h3>
+            <div class="comment" id="comment">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus et, perspiciatis nisi tempore aspernatur accusantium sed distinctio facilis aperiam laborum autem earum repellat, commodi eum. Ullam cupiditate expedita officiis obcaecati?
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="user" id="user">
+            <h3>Mark Gea</h3>
+            <div class="comment" id="comment">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus et, perspiciatis nisi tempore aspernatur accusantium sed distinctio facilis aperiam laborum autem earum repellat, commodi eum. Ullam cupiditate expedita officiis obcaecati?
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- review section ends -->
+  </section>
+  <br></br>
+  <script>
+
+    //-------------Chained effect---------------//
+
+    $(document).ready(function () {
+      $("#button1").click(function () {
+        $(".content").css("color", "red")
+          .slideUp(2000)
+      });
+    });
+
+    //------------animation----------------//
+
+    $(document).ready(function () {
+      $("#user").click(function () {
+        var div = $("#comment");
+        div.animate({
+          left: '100px'
+        }, "slow");
+        div.animate({
+          fontSize: '3em'
+        }, "slow");
+      });
+    });
+
+
+  </script>
+  <script src="shipping/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css File/cathalogue.css">
+    <title>Shopping Cart</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"><span>phone</span>Shop</a>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar" class="fas fa-bars"></label>
+        <nav class="Menu">
+            <a href="home.html">Home</a>
+            <a href="aboutus.html">About us</a>
+            <a href="catalogue.html">Catalogue</a>
+            <a href="MeetWithUs.html">Meet the Team</a>
+            <a class="cart" href="cart.html">
+                <ion-icon name="basket"></ion-icon>Cart<span>0</span>
+            </a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="image">
+            <img class="myImages" id="myImg" src="../images/iphone.jpg" alt="Iphone 13, color bleu 250GB " style="width: 400px; height: 405px;">
+            <h3>Iphone 13</h3>
+            <h3>R24000,00</h3>
+            <a class="add-cart cart1" href="#">Add Cart</a>
+        </div>
+        <div class="image">
+            <img class="myImages" id="myImg" src="../images/samsungs.jpg" alt="Samsung S21 color dark bleu 250GB" style="width: 400px; height: 405px;">
+            <h3>Samsung S21</h3>
+            <h3>R23000,00</h3>
+            <a class="add-cart cart2" href="#">Add Cart</a>
+            <input type="hidden" value="20" />
+        </div>
+        <div class="image">
+            <img class="myImages" id="myImg"  src="../images/huaweyppro.jpg" alt="Huawey P40 Pro, color grey 250GB" style="width: 400px; height: 405px;">
+            <h3>Huawey P40 Pro</h3>
+            <h3>R22000,00</h3>
+            <a class="add-cart cart3" href="#">Add Cart</a>
+        </div>
+        <div class="image">
+            <img class="myImages" id="myImg"  src="../images/samsunga.jpg" alt="Samsung A32, color light grey, 125GB" style="width: 400px; height: 405px;">
+            <h3>Samsung A32</h3>
+            <h3>R15000,00</h3>
+            <a class="add-cart cart4" href="#">Add Cart</a>
+        </div>
+        <div class="image">
+            <img class="myImages" id="myImg"  src="../images/hisense.jpg" alt="Hisense color bleu 64GB" style="width: 400px; height: 405px;">
+            <h3>Hisense</h3>
+            <h3>R6000,00</h3>
+            <a class="add-cart cart5" href="#">Add Cart</a>
+        </div>
+        <div class="image">
+            <img class="myImages" id="myImg"  src="../images/nokiag.jpg" alt="Nokia G300 color dark 125GB" style="width: 400px; height: 405px;">
+            <h3>Nokia G300</h3>
+            <h3>R9000,00</h3>
+            <a class="add-cart cart6" href="#">Add Cart</a>
+        </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01"> 
+            <div id="caption"></div>
+        </div>
+    </div>
+    
+    <script>
+    // create references to the modal...
+        var modal = document.getElementById('myModal');
+        // to all images -- note I'm using a class!
+        var images = document.getElementsByClassName('myImages');
+        // the image in the modal
+        var modalImg = document.getElementById("img01");
+        // and the caption in the modal
+        var captionText = document.getElementById("caption");
+
+        // Go through all of the images with our custom class
+        for (var i = 0; i < images.length; i++) {
+            var img = images[i];
+            // and attach our click listener for this image.
+            img.onclick = function (evt) {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        }
+
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    </script>
+    <script src="../JS File/main.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+</body>
+
+</html>

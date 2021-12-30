@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css File/cathalogue.css">
+    <title>Shopping Cart</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo2">
+            <a href="#" class="logo"><span>phone</span>Shop</a>
+        </div>
+        <nav>
+            <div id="nav">
+                <a class="dropdown-toggle" href="#">Menu</a>
+                <div class="dropdown">
+                    <a href="home.html">Home</a>
+                    <a href="aboutus.html">About us</a>
+                    <a href="catalogue.html">Catalogue</a>
+                    <a href="MeetWithUs.html">Meet the Team</a>
+                </div>
+                <a class="cart" href="cart.html">
+                    <ion-icon name="basket"></ion-icon>Cart<span>0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-------radio button for collect or delivery-->
+
+    <div class="body">
+        
+        <form class="myform">
+            <h4>collection or pick up</h4>
+            <input name="myRadio" type="radio" value="collect" id="collect"/>collect<br>
+            <input name="myRadio" type="radio" value="delivery" id="delivery1"/>Normal delivery<br>
+            <input name="myRadio" type="radio" value="delivery" id="delivery2"/>Express delivery<br>
+            <br>
+            <input type="button" onclick="checkButton()" value="submit">
+            <br></br>
+        </form>
+
+        <!--------------------------------->
+        
+        <button id="hide">Hide</button>
+        <button id="show">Show</button>
+        <br></br>
+        <!--------discount------------->
+        <div class="coupon">
+            <p> Copy and paste! </p>
+            <p> the Discount code: <span>GoodLuck </span> </p>
+        </div>
+        <div class="discount">
+            <input id="in" class="discount2" type="text" name="text1">
+            <input class="discount1" type="button" value="Validate Coupon" name="Submit" onclick="validate(document.getElementsByName('text1')[0].value)">
+        </div>
+        <br></br>
+        <!---------product list-------->
+        <div class="container-products">
+            <div class="product-header">
+                <h5 class="product-title">PRODUCT</h5>
+                <h5 class="price sm-hide">PRICE</h5>
+                <h5 class="quantity">QUANTITY</h5>
+                <h5 class="total">TOTAL</h5>
+            </div>
+            <div class="products" id="products">
+            </div>
+            <br></br>
+            <!-------order confirmation------->
+            <button class="confirm" onclick="order()">confirm order</button>
+        </div>
+        
+    </div>
+    <script src="../JS File/main.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
